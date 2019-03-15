@@ -23,7 +23,7 @@
 1. Require the package using composer:
 
     ```
-    composer require i9code/laravel-metronic
+    composer require i9code/laravelmetronic
     ```
 
 2. Add the service provider to the `providers` in `config/app.php`:
@@ -31,13 +31,13 @@
     > Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider
 
     ```php
-    i9code\laravel-metronic\ServiceProvider::class,
+    i9code\laravelmetronic\ServiceProvider::class,
     ```
 
 3. Publish the public assets:
 
     ```
-    php artisan vendor:publish --provider="i9code\laravel-metronic\ServiceProvider" --tag=assets
+    php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=assets
     ```
 
 ## 2. Updating
@@ -45,13 +45,13 @@
 1. To update this package, first update the composer package:
 
     ```
-    composer update i9code/laravel-metronic
+    composer update i9code/laravelmetronic
     ```
 
 2. Then, publish the public assets with the `--force` flag to overwrite existing files
 
     ```
-    php artisan vendor:publish --provider="i9code\laravel-metronic\ServiceProvider" --tag=assets --force
+    php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=assets --force
     ```
 
 ## 3. Usage
@@ -144,7 +144,7 @@ If you don't want a registration form, set the `register_url` setting to `null` 
 First, publish the configuration file:
 
 ```
-php artisan vendor:publish --provider="i9code\laravel-metronic\ServiceProvider" --tag=config
+php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=config
 ```
 
 Now, edit `config/adminlte.php` to configure the title, skin, menu, URLs etc. All configuration options are explained in the comments. However, I want to shed some light on the `menu` configuration.
@@ -238,11 +238,11 @@ And then add to `config/adminlte.php`:
 
 ```php
 'filters' => [
-    i9code\laravel-metronic\Menu\Filters\ActiveFilter::class,
-    i9code\laravel-metronic\Menu\Filters\HrefFilter::class,
-    i9code\laravel-metronic\Menu\Filters\SubmenuFilter::class,
-    i9code\laravel-metronic\Menu\Filters\ClassesFilter::class,
-    //i9code\laravel-metronic\Menu\Filters\GateFilter::class, Comment this line out
+    i9code\laravelmetronic\Menu\Filters\ActiveFilter::class,
+    i9code\laravelmetronic\Menu\Filters\HrefFilter::class,
+    i9code\laravelmetronic\Menu\Filters\SubmenuFilter::class,
+    i9code\laravelmetronic\Menu\Filters\ClassesFilter::class,
+    //i9code\laravelmetronic\Menu\Filters\GateFilter::class, Comment this line out
     MyApp\MyMenuFilter::class,
 ]
 ```
@@ -258,7 +258,7 @@ To configure the menu at runtime, register a handler or callback for the `MenuBu
 
 ```php
 use Illuminate\Contracts\Events\Dispatcher;
-use i9code\laravel-metronic\Events\BuildingMenu;
+use i9code\laravelmetronic\Events\BuildingMenu;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -353,7 +353,7 @@ Just specifiy the language in `config/app.php`.
 If you need to modify the texts or add other languages, you can publish the language files:
 
 ```
-php artisan vendor:publish --provider="i9code\laravel-metronic\ServiceProvider" --tag=translations
+php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=translations
 ```
 
 Now, you can edit translations or add languages in `resources/lang/vendor/adminlte`.
@@ -363,7 +363,7 @@ Now, you can edit translations or add languages in `resources/lang/vendor/adminl
 If you need full control over the provided views, you can publish them:
 
 ```
-php artisan vendor:publish --provider="i9code\laravel-metronic\ServiceProvider" --tag=views
+php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=views
 ```
 
 Now, you can edit the views in `resources/views/vendor/adminlte`.
