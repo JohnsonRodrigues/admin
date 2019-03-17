@@ -15,7 +15,7 @@ class MakeMetronicCommand extends MakeAuthCommand
         'auth/register.stub'        => 'auth/register.blade.php',
         'auth/passwords/email.stub' => 'auth/passwords/email.blade.php',
         'auth/passwords/reset.stub' => 'auth/passwords/reset.blade.php',
-        'auth/passwords/verify.stub' => 'auth/passwords/verify.blade.php',
+        'auth/verify.stub'          => 'auth/verify.blade.php',
         'home.stub'                 => 'home.blade.php',
     ];
 
