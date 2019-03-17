@@ -31,7 +31,7 @@
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     <a href="{{ url(config('metronic.dashboard_url', 'home')) }}">
-                        <img src="{!! config('metronic.logo', '../assets/layouts/layout/img/logo.png') !!}" alt="logo"
+                        <img src="{{asset(config('metronic.logo', '../assets/layouts/layout/img/logo.png'))}}" alt="logo"
                              class="logo-default"/> </a>
                     @if(config('metronic.page_full_width')!='page-full-width')
                         <div class="menu-toggler sidebar-toggler">

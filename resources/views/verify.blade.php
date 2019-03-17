@@ -14,7 +14,8 @@
     <!-- BEGIN LOGO -->
     <div class="logo">
         <a href="{{ url(config('metronic.dashboard_url', 'home')) }}">
-            <img src="{!! config('metronic.logo', '<b>Admin</b>LTE') !!}" alt=""/>
+            <img src="{{asset(config('metronic.logo', '../assets/layouts/layout/img/logo.png'))}}" alt="logo"
+                 class="logo-default"/>
         </a>
     </div>
     <!-- END LOGO -->

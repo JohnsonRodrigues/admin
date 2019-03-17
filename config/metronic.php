@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'logo' => URL::asset('vendor/metronic/pages/img/logo-big.png'),
+    'logo' => 'vendor/metronic/pages/img/logo-big.png',
 
 
     //default components-square | Square == 'components-square' | Rounded == 'components-rounded'
