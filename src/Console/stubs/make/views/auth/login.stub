@@ -1,1 +1,1 @@
-@extends('adminlte::login')
+@extends('metronic::login')

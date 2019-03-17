@@ -1,6 +1,6 @@
-@extends('adminlte::page')
+@extends('metronic::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'Metronic')
 
 @section('content_header')
     <h1>Dashboard</h1>

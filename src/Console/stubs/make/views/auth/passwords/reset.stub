@@ -1,1 +1,1 @@
-@extends('adminlte::passwords.reset')
+@extends('metronic::passwords.reset')

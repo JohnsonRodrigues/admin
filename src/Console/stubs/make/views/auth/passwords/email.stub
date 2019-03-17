@@ -1,1 +1,1 @@
-@extends('adminlte::passwords.email')
+@extends('metronic::passwords.email')

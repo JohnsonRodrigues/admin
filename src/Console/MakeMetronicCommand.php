@@ -4,17 +4,18 @@ namespace I9code\LaravelMetronic\Console;
 
 use Illuminate\Auth\Console\MakeAuthCommand;
 
-class MakeAdminLteCommand extends MakeAuthCommand
+class MakeMetronicCommand extends MakeAuthCommand
 {
     protected $signature = 'make:metronic {--views : Only scaffold the authentication views}{--force : Overwrite existing views by default}';
 
     protected $description = 'Scaffold basic Metronic login and registration views and routes';
 
-    protected $adminLteViews = [
+    protected $metronicViews = [
         'auth/login.stub'           => 'auth/login.blade.php',
         'auth/register.stub'        => 'auth/register.blade.php',
         'auth/passwords/email.stub' => 'auth/passwords/email.blade.php',
         'auth/passwords/reset.stub' => 'auth/passwords/reset.blade.php',
+        'auth/passwords/verify.stub' => 'auth/passwords/verify.blade.php',
         'home.stub'                 => 'home.blade.php',
     ];
 
@@ -22,7 +23,7 @@ class MakeAdminLteCommand extends MakeAuthCommand
     {
         parent::exportViews();
 
-        foreach ($this->adminLteViews as $key => $value) {
+        foreach ($this->metronicViews as $key => $value) {
             copy(__DIR__.'/stubs/make/views/'.$key,
                 base_path('resources/views/'.$value));
         }

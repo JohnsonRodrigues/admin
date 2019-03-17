@@ -7,7 +7,7 @@
 2. [Updating](#2-updating)
 3. [Usage](#3-usage)
 4. [The `make:adminmetronic` artisan command](#4-the-makeadminlte-artisan-command)
-   1. [Using the authentication views without the `make:adminlte` command](#41-using-the-authentication-views-without-the-makeadminlte-command)
+   1. [Using the authentication views without the `make:metronic` command](#41-using-the-authentication-views-without-the-makeadminlte-command)
 5. [Configuration](#5-configuration)
    1. [Menu](#51-menu)
      - [Custom menu filters](#custom-menu-filters)
@@ -56,7 +56,7 @@
 
 ## 3. Usage
 
-To use the template, create a blade file and extend the layout with `@extends('adminlte::page')`.
+To use the template, create a blade file and extend the layout with `@extends('metronic::page')`.
 This template yields the following sections:
 
 - `title`: for in the `<title>` tag
@@ -70,7 +70,7 @@ All sections are in fact optional. Your blade template could look like the follo
 ```html
 {{-- resources/views/admin/dashboard.blade.php --}}
 
-@extends('adminlte::page')
+@extends('metronic::page')
 
 @section('title', 'Dashboard')
 
@@ -103,37 +103,37 @@ Note that in Laravel 5.2 or higher you can also use `@stack` directive for `css`
 
 You now just return this view from your controller, as usual. Check out [AdminLTE](https://almsaeedstudio.com) to find out how to build beautiful content for your admin panel.
 
-## 4. The `make:adminlte` artisan command
+## 4. The `make:metronic` artisan command
 
 > Note: only for Laravel 5.2 and higher
 
-This package ships with a `make:adminlte` command that behaves exactly like `make:auth` (introduced in Laravel 5.2) but replaces the authentication views with AdminLTE style views.
+This package ships with a `make:metronic` command that behaves exactly like `make:auth` (introduced in Laravel 5.2) but replaces the authentication views with AdminLTE style views.
 
 ```
-php artisan make:adminlte
+php artisan make:metronic
 ```
 
 This command should be used on fresh applications, just like the `make:auth` command
 
-### 4.1 Using the authentication views without the `make:adminlte` command
+### 4.1 Using the authentication views without the `make:metronic` command
 
 If you want to use the included authentication related views manually, you can create the following files and only add one line to each file:
 
 - `resources/views/auth/login.blade.php`:
 ```
-@extends('adminlte::login')
+@extends('metronic::login')
 ```
 - `resources/views/auth/register.blade.php`
 ```
-@extends('adminlte::register')
+@extends('metronic::register')
 ```
 - `resources/views/auth/passwords/email.blade.php`
 ```
-@extends('adminlte::passwords.email')
+@extends('metronic::passwords.email')
 ```
 - `resources/views/auth/passwords/reset.blade.php`
 ```
-@extends('adminlte::passwords.reset')
+@extends('metronic::passwords.reset')
 ```
 
 By default, the login form contains a link to the registration form.
@@ -147,7 +147,7 @@ First, publish the configuration file:
 php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=config
 ```
 
-Now, edit `config/adminlte.php` to configure the title, skin, menu, URLs etc. All configuration options are explained in the comments. However, I want to shed some light on the `menu` configuration.
+Now, edit `config/metronic.php` to configure the title, skin, menu, URLs etc. All configuration options are explained in the comments. However, I want to shed some light on the `menu` configuration.
 
 ### 5.1 Menu
 
@@ -234,7 +234,7 @@ class MyMenuFilter implements FilterInterface
 }
 ```
 
-And then add to `config/adminlte.php`:
+And then add to `config/metronic.php`:
 
 ```php
 'filters' => [
@@ -319,7 +319,7 @@ To override this behavior, you can specify an `active` parameter with an array o
 
 ### 5.2 Plugins
 
-By default the [DataTables](https://datatables.net/) plugin is supported. If set to `true`, the necessary javascript CDN script tags will automatically be injected into the `adminlte::page.blade` file.
+By default the [DataTables](https://datatables.net/) plugin is supported. If set to `true`, the necessary javascript CDN script tags will automatically be injected into the `metronic::page.blade` file.
 
 ```php
 'plugins' => [
@@ -327,7 +327,7 @@ By default the [DataTables](https://datatables.net/) plugin is supported. If set
 ]
 ```
 
-Also the [Select2](https://select2.github.io/) plugin is supported. If set to `true`, the necessary javascript CDN script tags will automatically be injected into the `adminlte::page.blade` file.
+Also the [Select2](https://select2.github.io/) plugin is supported. If set to `true`, the necessary javascript CDN script tags will automatically be injected into the `metronic::page.blade` file.
 
 ```php
 'plugins' => [
@@ -336,7 +336,7 @@ Also the [Select2](https://select2.github.io/) plugin is supported. If set to `t
 ]
 ```
 
-Also the [ChartJS](https://www.chartjs.org/) plugin is supported. If set to `true`, the necessary javascript CDN script tags will automatically be injected into the `adminlte::page.blade` file.
+Also the [ChartJS](https://www.chartjs.org/) plugin is supported. If set to `true`, the necessary javascript CDN script tags will automatically be injected into the `metronic::page.blade` file.
 
 ```php
 'plugins' => [
@@ -356,7 +356,7 @@ If you need to modify the texts or add other languages, you can publish the lang
 php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=translations
 ```
 
-Now, you can edit translations or add languages in `resources/lang/vendor/adminlte`.
+Now, you can edit translations or add languages in `resources/lang/vendor/metronic`.
 
 ## 7. Customize views
 
@@ -366,7 +366,7 @@ If you need full control over the provided views, you can publish them:
 php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=views
 ```
 
-Now, you can edit the views in `resources/views/vendor/adminlte`.
+Now, you can edit the views in `resources/views/vendor/metronic`.
 
 ## 8. Issues, Questions and Pull Requests
 
