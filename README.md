@@ -31,13 +31,13 @@
     > Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider
 
     ```php
-    i9code\laravelmetronic\ServiceProvider::class,
+    I9code\LaravelMetronic\ServiceProvider::class,
     ```
 
 3. Publish the public assets:
 
     ```
-    php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=assets
+    php artisan vendor:publish --provider="I9code\LaravelMetronic\ServiceProvider" --tag=assets
     ```
 
 ## 2. Updating
@@ -51,7 +51,7 @@
 2. Then, publish the public assets with the `--force` flag to overwrite existing files
 
     ```
-    php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=assets --force
+    php artisan vendor:publish --provider="I9code\LaravelMetronic\ServiceProvider" --tag=assets --force
     ```
 
 ## 3. Usage
@@ -144,7 +144,7 @@ If you don't want a registration form, set the `register_url` setting to `null` 
 First, publish the configuration file:
 
 ```
-php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=config
+php artisan vendor:publish --provider="I9code\LaravelMetronic\ServiceProvider" --tag=config
 ```
 
 Now, edit `config/metronic.php` to configure the title, skin, menu, URLs etc. All configuration options are explained in the comments. However, I want to shed some light on the `menu` configuration.
@@ -217,8 +217,8 @@ For example with Laratrust:
 
 namespace MyApp;
 
-use i9code\laravelmetronic\Menu\Builder;
-use i9code\laravelmetronic\Menu\Filters\FilterInterface;
+use I9code\LaravelMetronic\Menu\Builder;
+use I9code\LaravelMetronic\Menu\Filters\FilterInterface;
 use Laratrust;
 
 class MyMenuFilter implements FilterInterface
@@ -238,11 +238,11 @@ And then add to `config/metronic.php`:
 
 ```php
 'filters' => [
-    i9code\laravelmetronic\Menu\Filters\ActiveFilter::class,
-    i9code\laravelmetronic\Menu\Filters\HrefFilter::class,
-    i9code\laravelmetronic\Menu\Filters\SubmenuFilter::class,
-    i9code\laravelmetronic\Menu\Filters\ClassesFilter::class,
-    //i9code\laravelmetronic\Menu\Filters\GateFilter::class, Comment this line out
+    I9code\LaravelMetronic\Menu\Filters\ActiveFilter::class,
+    I9code\LaravelMetronic\Menu\Filters\HrefFilter::class,
+    I9code\LaravelMetronic\Menu\Filters\SubmenuFilter::class,
+    I9code\LaravelMetronic\Menu\Filters\ClassesFilter::class,
+    //I9code\LaravelMetronic\Menu\Filters\GateFilter::class, Comment this line out
     MyApp\MyMenuFilter::class,
 ]
 ```
@@ -258,7 +258,7 @@ To configure the menu at runtime, register a handler or callback for the `MenuBu
 
 ```php
 use Illuminate\Contracts\Events\Dispatcher;
-use i9code\laravelmetronic\Events\BuildingMenu;
+use I9code\LaravelMetronic\Events\BuildingMenu;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -353,7 +353,7 @@ Just specifiy the language in `config/app.php`.
 If you need to modify the texts or add other languages, you can publish the language files:
 
 ```
-php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=translations
+php artisan vendor:publish --provider="I9code\LaravelMetronic\ServiceProvider" --tag=translations
 ```
 
 Now, you can edit translations or add languages in `resources/lang/vendor/metronic`.
@@ -363,7 +363,7 @@ Now, you can edit translations or add languages in `resources/lang/vendor/metron
 If you need full control over the provided views, you can publish them:
 
 ```
-php artisan vendor:publish --provider="i9code\laravelmetronic\ServiceProvider" --tag=views
+php artisan vendor:publish --provider="I9code\LaravelMetronic\ServiceProvider" --tag=views
 ```
 
 Now, you can edit the views in `resources/views/vendor/metronic`.
