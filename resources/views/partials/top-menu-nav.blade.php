@@ -121,7 +121,7 @@
                         <li>
                             <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar2.jpg"
+                                                        <img src="{{asset('vendor/metronic/layouts/layout/img/avatar2.jpg')}}"
                                                              class="img-circle" alt=""> </span>
                                 <span class="subject">
                                                         <span class="from"> Lisa Wong </span>
@@ -133,7 +133,7 @@
                         <li>
                             <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar3.jpg"
+                                                        <img src="{{asset('vendor/metronic/layouts/layout/img/avatar3.jpg')}}"
                                                              class="img-circle" alt=""> </span>
                                 <span class="subject">
                                                         <span class="from"> Richard Doe </span>
@@ -145,7 +145,7 @@
                         <li>
                             <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar1.jpg"
+                                                        <img src="{{asset('vendor/metronic/layouts/layout/img/avatar1.jpg')}}"
                                                              class="img-circle" alt=""> </span>
                                 <span class="subject">
                                                         <span class="from"> Bob Nilson </span>
@@ -157,7 +157,7 @@
                         <li>
                             <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar2.jpg"
+                                                        <img src="{{asset('vendor/metronic/layouts/layout/img/avatar2.jpg')}}"
                                                              class="img-circle" alt=""> </span>
                                 <span class="subject">
                                                         <span class="from"> Lisa Wong </span>
@@ -169,7 +169,7 @@
                         <li>
                             <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar3.jpg"
+                                                        <img src="{{asset('vendor/metronic/layouts/layout/img/avatar3.jpg')}}"
                                                              class="img-circle" alt=""> </span>
                                 <span class="subject">
                                                         <span class="from"> Richard Doe </span>
@@ -313,7 +313,7 @@
         <li class="dropdown dropdown-user">
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                data-close-others="true">
-                <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg"/>
+                <img alt="" class="img-circle" src="{{asset('vendor/metronic/layouts/layout/img/avatar3_small.jpg')}}"/>
                 <span class="username username-hide-on-mobile"> Nick </span>
                 <i class="fa fa-angle-down"></i>
             </a>

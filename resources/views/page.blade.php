@@ -13,7 +13,8 @@
     @yield('css')
 @stop
 
-@section('body_class', config('metronic.header', ' ').
+@section('body_class', 'page-sidebar-closed-hide-logo page-content-white '.
+                       config('metronic.header', ' ').
                        config('metronic.layout',' ').
                        config('metronic.sidebar_closed',' ').
                        config('metronic.page_full_width',' ').
@@ -59,8 +60,8 @@
 
 
                 <!-- BEGIN TOP NAVIGATION MENU -->
-                @include('metronic::partials.top-menu-nav')
-                <!-- END TOP NAVIGATION MENU -->
+            @include('metronic::partials.top-menu-nav')
+            <!-- END TOP NAVIGATION MENU -->
 
             </div>
             <!-- END HEADER INNER -->
@@ -90,27 +91,27 @@
                             </div>
                         </li>
                         {{--<li class="sidebar-search-wrapper">--}}
-                            {{--<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->--}}
-                            {{--<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->--}}
-                            {{--<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->--}}
-                            {{--<form class="sidebar-search  sidebar-search-bordered" action="page_general_search_3.html"--}}
-                                  {{--method="POST">--}}
-                                {{--<a href="javascript:;" class="remove">--}}
-                                    {{--<i class="icon-close"></i>--}}
-                                {{--</a>--}}
-                                {{--<div class="input-group">--}}
-                                    {{--<input type="text" class="form-control" placeholder="Search...">--}}
-                                    {{--<span class="input-group-btn">--}}
-                                            {{--<a href="javascript:;" class="btn submit">--}}
-                                                {{--<i class="icon-magnifier"></i>--}}
-                                            {{--</a>--}}
-                                        {{--</span>--}}
-                                {{--</div>--}}
-                            {{--</form>--}}
-                            {{--<!-- END RESPONSIVE QUICK SEARCH FORM -->--}}
+                        {{--<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->--}}
+                        {{--<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->--}}
+                        {{--<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->--}}
+                        {{--<form class="sidebar-search  sidebar-search-bordered" action="page_general_search_3.html"--}}
+                        {{--method="POST">--}}
+                        {{--<a href="javascript:;" class="remove">--}}
+                        {{--<i class="icon-close"></i>--}}
+                        {{--</a>--}}
+                        {{--<div class="input-group">--}}
+                        {{--<input type="text" class="form-control" placeholder="Search...">--}}
+                        {{--<span class="input-group-btn">--}}
+                        {{--<a href="javascript:;" class="btn submit">--}}
+                        {{--<i class="icon-magnifier"></i>--}}
+                        {{--</a>--}}
+                        {{--</span>--}}
+                        {{--</div>--}}
+                        {{--</form>--}}
+                        {{--<!-- END RESPONSIVE QUICK SEARCH FORM -->--}}
                         {{--</li>--}}
 
-                            @each('metronic::partials.menu-item', $metronic->menu(), 'item')
+                        @each('metronic::partials.menu-item', $metronic->menu(), 'item')
 
                     </ul>
                     <!-- END SIDEBAR MENU -->
@@ -127,8 +128,8 @@
                     <!-- BEGIN PAGE HEADER-->
 
                     <!-- BEGIN PAGE BAR -->
-                    @include('metronic::partials.page-bar')
-                    <!-- END PAGE BAR -->
+                @include('metronic::partials.page-bar')
+                <!-- END PAGE BAR -->
 
 
                     <!-- BEGIN PAGE TITLE-->
@@ -147,8 +148,8 @@
 
 
         <!-- BEGIN FOOTER -->
-       @include('metronic::partials.footer')
-        <!-- END FOOTER -->
+    @include('metronic::partials.footer')
+    <!-- END FOOTER -->
 
     </div>
     <!-- END WRAPPER -->

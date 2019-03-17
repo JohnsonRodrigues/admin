@@ -15,6 +15,13 @@
 {{--<meta content="Preview page of Metronic Admin Theme #1 for blank page layout" name="description"/>--}}
 {{--<meta content="" name="author"/>--}}
 
+<!-- BEGIN PAGE FIRST SCRIPTS -->
+    <script src="{{asset('vendor/metronic/global/plugins/pace/pace.min.js')}}" type="text/javascript"></script>
+    <!-- END PAGE FIRST SCRIPTS -->
+    <!-- BEGIN PAGE TOP STYLES -->
+    <link href="{{asset('vendor/metronic/global/plugins/pace/themes/pace-theme-flash.css')}}" rel="stylesheet" type="text/css" />
+    <!-- END PAGE TOP STYLES -->
+
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
           type="text/css"/>
@@ -41,7 +48,7 @@
 <!-- END HEAD -->
 
 
-<body class="page-sidebar-closed-hide-logo page-content-white  @yield('body_class')">
+<body class="@yield('body_class')">
 
 @yield('body')
 
@@ -58,7 +65,6 @@
 <!-- BEGIN CORE PLUGINS -->
 <script src="{{asset('vendor/metronic/global/plugins/jquery.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('vendor/metronic/global/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('vendor/metronic/global/plugins/js.cookie.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('vendor/metronic/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}"
         type="text/javascript"></script>
 <!-- END CORE PLUGINS -->

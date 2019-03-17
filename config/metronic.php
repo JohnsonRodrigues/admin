@@ -14,8 +14,8 @@ return [
     */
 
     'title' => 'Metronic',
-    'version'=>'v0001',
-    'developer'=>'#',
+    'version' => 'v0001',
+    'developer' => '#',
 
     /*
     |--------------------------------------------------------------------------
@@ -28,9 +28,7 @@ return [
     |
     */
 
-    'logo' => '../assets/layouts/layout/img/logo.png',
-
-
+    'logo' => asset('vendor/metronic/pages/img/logo-big.png'),
 
 
     //default components-square | Square == 'components-square' | Rounded == 'components-rounded'
