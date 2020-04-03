@@ -32,7 +32,7 @@
             return 'Ocultar/Exibir paginação';
         },
         formatNoMatches: function () {
-            return 'Nenhum registro encontrado';
+            return 'Nenhum Registro encontrado';
         }
     };
 

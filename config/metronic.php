@@ -18,21 +18,23 @@ return [
     'developer' => '#',
 
     /*
-    |--------------------------------------------------------------------------
-    | Logo
-    |--------------------------------------------------------------------------
-    |
-    | This logo is displayed at the upper left corner of your admin panel.
-    | You can use basic HTML here if you want. The logo has also a mini
-    | variant, used for the mini side bar. Make it 3 letters or so
-    |
-    */
+   |--------------------------------------------------------------------------
+   | Logo
+   |--------------------------------------------------------------------------
+   |
+   | This logo is displayed at the upper left corner of your admin panel.
+   | You can use basic HTML here if you want. The logo has also a mini
+   | variant, used for the mini side bar. Make it 3 letters or so
+   |
+   */
 
     'logo' => 'vendor/metronic/pages/img/logo-big.png',
+    'logo_home' => 'vendor/metronic/pages/img/logo.png',
+    'favicon' => 'vendor/metronic/pages/img/favicon.ico',
 
 
     //default components-square | Square == 'components-square' | Rounded == 'components-rounded'
-    'theme_style' => 'components-square',
+    'theme_style' => 'components-rounded',
 
     //default '' | full width(fluid)  == '' | boxed == 'page-boxed'
     'layout' => '',
@@ -56,7 +58,10 @@ return [
     'sidebar_closed' => '',
 
     //default '' | default(sidebar and page)  == '' | page_full_width == 'page-full-width'
-    'page_full_width' => 'page-full-width',
+    'page_full_width' => '',
+
+    //default '' | default(full width white)  == '' | page_content(com sidebar) == 'page-container-bg-solid'
+    'page_content' => 'page-container-bg-solid',
 
 
     /*
@@ -117,6 +122,8 @@ return [
     'login_url' => 'login',
 
     'register_url' => 'register',
+
+    'password_reset_url' => 'password/reset',
 
     /*
     |--------------------------------------------------------------------------
