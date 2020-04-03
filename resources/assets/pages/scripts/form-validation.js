@@ -78,9 +78,9 @@ var FormValidation = function () {
                 },
 
                 highlight: function (element) { // hightlight error inputs
-                    $(element).parent().is('.has-success, .has-error') ?
-                        $(element).parent().removeClass('has-success').addClass('has-error') :
-                        $(element).wrap('<span class="has-error"></span>');
+
+                    $(element)
+                        .closest('.form-group').addClass('has-error'); // set error class to the control group
                 },
 
                 unhighlight: function (element) { // revert the change done by hightlight

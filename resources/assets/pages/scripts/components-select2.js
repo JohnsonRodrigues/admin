@@ -45,7 +45,7 @@ var ComponentsSelect2 = function() {
         }
 
         function formatRepoSelection(repo) {
-            return "<img width='30px' class='flag' src='" + repo.owner.avatar_url + "'/>" + repo.full_name || repo.text;
+            return repo.full_name || repo.text;
         }
 
         $(".js-data-example-ajax").select2({

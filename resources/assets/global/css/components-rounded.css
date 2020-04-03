@@ -1299,6 +1299,7 @@ File dropzone
 ***/
 .file-drop-zone {
   border: 2px dashed #ddd;
+  padding: 30px;
   text-align: center; }
   .file-drop-zone.file-drop-zone-over {
     border-color: #aaa; }

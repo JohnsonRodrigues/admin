@@ -1,6 +1,6 @@
 .ms-container{
   background: transparent url('../img/switch.png') no-repeat 50% 50%;
-  width: 100%;
+  width: 370px;
 }
 
 .ms-container:after{
@@ -72,10 +72,9 @@
 .ms-container .ms-selectable li.ms-elem-selectable,
 .ms-container .ms-selection li.ms-elem-selection{
   border-bottom: 1px #eee solid;
-  padding: 5px 10px;
+  padding: 2px 10px;
   color: #555;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 .ms-container .ms-selectable li.ms-hover,

@@ -8,6 +8,22 @@ var FormWizard = function () {
                 return;
             }
 
+            function format(state) {
+                if (!state.id) return state.text; // optgroup
+                return "<img class='flag' src='../../assets/global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
+            }
+
+            $("#country_list").select2({
+                placeholder: "Select",
+                allowClear: true,
+                formatResult: format,
+                width: 'auto', 
+                formatSelection: format,
+                escapeMarkup: function (m) {
+                    return m;
+                }
+            });
+
             var form = $('#submit_form');
             var error = $('.alert-danger', form);
             var success = $('.alert-success', form);
@@ -147,7 +163,7 @@ var FormWizard = function () {
                         $(this).html(input.attr("data-title"));
                     } else if ($(this).attr("data-display") == 'payment[]') {
                         var payment = [];
-                        $('[name="payment[]"]:checked', form).each(function(){
+                        $('[name="payment[]"]:checked', form).each(function(){ 
                             payment.push($(this).attr('data-title'));
                         });
                         $(this).html(payment.join("<br>"));
