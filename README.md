@@ -1,10 +1,5 @@
 # Easy Admin integration 
 
-
-
-
-
-
 1. [Installation](#1-installation)
 2. [Updating](#2-updating)
 3. [Usage](#3-usage)
